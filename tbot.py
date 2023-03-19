@@ -4,11 +4,11 @@ import string
 import os
 import motor.motor_asyncio
 from aiogram import Bot, Dispatcher, types
+import secretkey
 
 
 
-
-BOT_TOKEN = os.environ.get('BOT_TOKEN', '6209727326:AAE3goDssR6VlVb6hATMu1howksHZ9J2jTw')
+BOT_TOKEN = os.environ.get('BOT_TOKEN', secretkey.token)
 
 client = motor.motor_asyncio.AsyncIOMotorClient(
         f'mongodb://root:example@{os.environ.get("DB_HOST", "localhost")}:27017')
